@@ -7,7 +7,7 @@ name: Checkov Reusable Scan
 on:
   push:
     branches:
-      - CCL-4617
+      - main
   workflow_call:
     inputs:
       env_name:
