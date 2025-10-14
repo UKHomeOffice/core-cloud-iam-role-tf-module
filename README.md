@@ -1,4 +1,4 @@
-# TF-Module-Name
+# TF Module Name
 
 Description of the module and how to use this, including mandatory and optional parameters.
 
