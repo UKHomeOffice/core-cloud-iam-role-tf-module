@@ -2,8 +2,8 @@
 # Eg https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs#output-vpc-and-load-balancer-information
 # Example output block provided
 
-output "vpc_id" {
-  description = "ID of project VPC"
-  value       = module.vpc.vpc_id
+output "resource_id" {
+  description = "ID of resource"
+  value       = module.resource.resource_id
 }
 

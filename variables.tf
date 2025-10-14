@@ -9,7 +9,7 @@ variable "environment" {
   description = "The environment the resource should be provisioned in, eg test, dev, prelive, live"
 }
 
-variable "cc_vars" {
+variable "cc_tags" {
   type = object({
     # enforced tags, all required attributes for costing and ID
     cost_centre                     = string
