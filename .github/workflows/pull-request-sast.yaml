@@ -1,6 +1,6 @@
 name: Validate Terraform with Trivy
 
-# Gold Standard Trivy Validation workflow to be provided by Sauron
+# Gold Standard Trivy Validation workflow to be provided by Team Sauron
 
 on:
   push:
