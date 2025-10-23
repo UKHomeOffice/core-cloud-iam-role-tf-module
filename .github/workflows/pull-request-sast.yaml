@@ -47,22 +47,11 @@ jobs:
           sonar_host_url: ${{ secrets.sonar_host_url }}
 
       - name: Checkov Scan
-        uses: UKHomeOffice/core-cloud-workflow-checkov-sast-scan/.github/workflows/checkov-scan-base.yaml@1.4.0
-
-      - name: SAST Checkov Scan Plan
-        uses: UKHomeOffice/core-cloud-workflow-checkov-sast-scan/.github/workflows/checkov-scan-tfplan.yaml@1.4.0
-        with:
-          # Optional inputs depending on code structure
-          path: 'e.g. terraform/environment/sandbox-ops-tooling'
-          env_name: 'e.g. sandbox-ops-tooling'
-          plan_role: '<role with permissions for generating a plan>'
-        # Github secret containing the AWS Account ID.
-        secrets:
-          account_id: ${{ e.g secrets.<account_name>_account_id }}
+        uses: UKHomeOffice/core-cloud-workflow-checkov-sast-scan/.github/workflows/checkov-scan-base.yaml@1.5.0
 
       # Results have to be a table as the organisation does not have Advanced Security license.
       - name: Terraform Trivy Scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@0.33.1
         with:
           scan-type: 'config'
          #trivyignores: ".trivyignore"
