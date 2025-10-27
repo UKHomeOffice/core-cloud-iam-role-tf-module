@@ -58,6 +58,6 @@ jobs:
           exit-code: '1'
 
       - name: Terraform tests
-        run : terraform test -filter=tests/<test-file-name>.tftest.hcl
+        run : terraform test
         env:
           ## Pass in any environment variables needed for the tests to run as expected
