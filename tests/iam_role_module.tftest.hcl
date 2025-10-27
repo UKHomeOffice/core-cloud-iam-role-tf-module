@@ -1,4 +1,3 @@
-// ...existing code...
 run "test_required_tags_and_metadata" {
   command = plan
   variables {
@@ -77,4 +76,3 @@ run "test_iam_role_outputs" {
     error_message = "Output resource_id should not be empty."
   }
 }
-// ...existing code...
