@@ -1,3 +1,5 @@
+# The main.tf will contain the main set of configuration for your module. You can also create other configuration files and organize them however makes sense for your project.
+
 locals {
   common_tags = {
     cost-centre     = var.tags.cost_centre
