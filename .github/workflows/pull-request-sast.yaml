@@ -1,6 +1,7 @@
 name: Validate Terraform with Trivy, Checkov and Sonarqube
 
 on:
+  workflow_dispatch:
   workflow_call:
     secrets:
       sonar_token:
