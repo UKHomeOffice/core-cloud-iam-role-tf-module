@@ -9,7 +9,7 @@ locals {
     service-id      = var.tags.service_id
     owner-business  = var.tags.owner-business
     budget-holder   = var.tags.budget-holder
-   environment-type = var.tags.envionment-type
+    environment-type = var.tags.envionment-type
   }
 }
 
