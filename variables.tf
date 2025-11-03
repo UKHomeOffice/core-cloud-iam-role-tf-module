@@ -5,17 +5,8 @@ variable "create" {
 }
 
 variable "tags" {
-  type = object({
-    # enforced tags, all required attributes for costing and ID
-    cost_centre     = string
-    account_code    = string
-    portfolio_id    = string
-    project_id      = string
-    service_id      = string
-    owner-business  = string
-    budget-holder   = string
-    environment-type = string
-  })
+  type    = map(string)
+  default = {}
 }
 
 variable "name" {

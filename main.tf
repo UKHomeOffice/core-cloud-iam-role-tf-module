@@ -2,13 +2,13 @@
 
 locals {
   common_tags = {
-    cost-centre     = var.tags.cost_centre
-    account-code    = var.tags.account_code
-    portfolio-id    = var.tags.portfolio_id
-    project-id      = var.tags.project_id
-    service-id      = var.tags.service_id
-    owner-business  = var.tags.owner-business
-    budget-holder   = var.tags.budget-holder
+    cost-centre      = var.tags.cost_centre
+    account-code     = var.tags.account_code
+    portfolio-id     = var.tags.portfolio_id
+    project-id       = var.tags.project_id
+    service-id       = var.tags.service_id
+    owner-business   = var.tags.owner-business
+    budget-holder    = var.tags.budget-holder
     environment-type = var.tags.envionment-type
   }
 }
