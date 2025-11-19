@@ -41,24 +41,23 @@ jobs:
       - name: Terraform Format
         run: terraform fmt -check
 
-  sonarqube-scanner:
-      uses: UKHomeOffice/core-cloud-workflow-sonarqube-scan/.github/workflows/sonarqube-scan.yaml@1.1.2
-      secrets:
-        sonar_token: ${{ secrets.sonar_token }}
-        sonar_host_url: ${{ secrets.sonar_host_url }}
+      - name: Sonarqube Scan
+        uses: UKHomeOffice/core-cloud-workflow-sonarqube-scan/.github/workflows/sonarqube-scan.yaml@1.1.2
+        secrets:
+          sonar_token: ${{ secrets.sonar_token }}
+          sonar_host_url: ${{ secrets.sonar_host_url }}
 
-  checkov-scan:
+      - name: Checkov Scan
         uses: UKHomeOffice/core-cloud-workflow-checkov-sast-scan/.github/workflows/checkov-scan-base.yaml@1.5.0
 
       # Results have to be a table as the organisation does not have Advanced Security license.
-#  - name: Terraform Trivy Scan
-#        uses: aquasecurity/trivy-action@0.33.1
-#        with:
-#          scan-type: 'config'
-#         #trivyignores: ".trivyignore"
-#          exit-code: '1'
-#
-#      - name: Terraform tests
-#        run : terraform test
+      - name: Terraform Trivy Scan
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: 'config'
+         #trivyignores: ".trivyignore"
+          exit-code: '1'
+
+      - name: Terraform tests
+        run : terraform test
 #        env:
-          ## Pass in any environment variables needed for the tests to run as expected
