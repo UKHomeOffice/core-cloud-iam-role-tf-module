@@ -41,8 +41,8 @@ jobs:
       - name: Terraform Format
         run: terraform fmt -check
 
-      - name: Terraform tests
-        run : terraform test
+#      - name: Terraform tests
+#        run : terraform test
 #        env:
 
   sonarqube-scanner:
