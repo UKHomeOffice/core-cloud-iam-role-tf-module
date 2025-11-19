@@ -41,9 +41,11 @@ jobs:
       - name: Terraform Format
         run: terraform fmt -check
 
+
 #      - name: Terraform tests
 #        run : terraform test
 #        env:
+
 
   sonarqube-scanner:
       uses: UKHomeOffice/core-cloud-workflow-sonarqube-scan/.github/workflows/sonarqube-scan.yaml@1.1.2
